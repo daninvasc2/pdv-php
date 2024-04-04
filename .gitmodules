@@ -1,0 +1,6 @@
+[submodule "pdv-php-backend"]
+	path = pdv-php-backend
+	url = https://github.com/daninvasc2/pdv-php-backend.git
+[submodule "pdv-php-frontend"]
+	path = pdv-php-frontend
+	url = https://github.com/daninvasc2/pdv-php-frontend.git
