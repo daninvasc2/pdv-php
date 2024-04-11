@@ -16,3 +16,5 @@ Para o frontend, é necessário o Node na versão 17+. Neste caso, é necessári
 Após a instalação, será necessário também rodar o comando npm install.
 Finalizando, será necessário rodar ng add @angular/material.
 Após isso, para servir a aplicação, basta rodar ng serve.
+
+Para o banco de dados, no repositório do backend, está presente um arquivo dump.sql que pode ser rodado para popular o banco com dados iniciais.
