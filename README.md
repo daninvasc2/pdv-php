@@ -4,7 +4,7 @@ O presente sistema tem o objetivo de testar meus conhecimentos. Utilizando apena
 
 # Instalação
 
-Na raz do projeto, está disponível um arquivo docker-compose.yml, que está configurado para rodar todo o sistema, incluindo o backend, frontend e o banco de dados.
+Na raíz do projeto, está disponível o arquivo docker-compose.yml, que está configurado para rodar todo o sistema, incluindo o backend, frontend e o banco de dados.
 Para se conectar ao banco de dados, a pasta do backend contém um arquivo .env.example, que necessita ser copiado e renomeado para .env. Lá é possível alterar as credenciais de acesso ao banco.
 
 Caso o Docker não seja uma opção, a instalação nativa também é bem simples:
