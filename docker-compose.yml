@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  app:
+    restart: always
+    container_name: pdv-php
+    build:
+      context: ./pdv-php-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8000"
+    volumes:
+      - ./pdv-php-backend:/var/www/html
+    depends_on:
+      - database
+
+  database:
+    restart: always
+    container_name: pdv-postgres
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: pdv_php
+
+  front:
+    restart: always
+    container_name: pdv-frontend
+    build:
+      context: ./pdv-php-frontend
+      dockerfile: Dockerfile
+    ports:
+        - "4200:4200"
+    volumes:
+        - "/app/node_modules"
+        - ./pdv-php-frontend:/app
+    command: ng serve --host 0.0.0.0 --disable-host-check --poll 1
